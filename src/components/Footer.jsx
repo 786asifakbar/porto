@@ -13,6 +13,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition duration-200"
+            aria-label="Twitter"
           >
             <i className="fab fa-twitter fa-lg"></i>
           </a>
@@ -21,6 +22,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition duration-200"
+            aria-label="LinkedIn"
           >
             <i className="fab fa-linkedin fa-lg"></i>
           </a>
@@ -29,6 +31,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition duration-200"
+            aria-label="GitHub"
           >
             <i className="fab fa-github fa-lg"></i>
           </a>

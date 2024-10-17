@@ -56,24 +56,24 @@ const Navbar = () => {
 
           {/* Social Media Icons */}
           <div className="social-icons hidden md:flex space-x-4">
-            <NavLink to="https://github.com/786asifakbar" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/786asifakbar" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github text-xl hover:text-gray-300"></i>
-            </NavLink>
-            <NavLink to="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter text-xl hover:text-gray-300"></i>
-            </NavLink>
-            <NavLink to="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin text-xl hover:text-gray-300"></i>
-            </NavLink>
-            <NavLink to="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram text-xl hover:text-gray-300"></i>
-            </NavLink>
+            </a>
           </div>
         </div>
 
         {/* Drawer for Mobile */}
         {drawerOpen && (
-          <div className="drawer fixed inset-0 bg-blue-600 bg-opacity-95 z-50 flex flex-col items-center justify-center">
+          <div className="drawer fixed inset-0 bg-blue-600 bg-opacity-95 z-50 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out transform">
             <button onClick={toggleDrawer} className="absolute top-4 right-6 text-white" aria-label="Close navigation">
               <svg
                 className="w-8 h-8"
@@ -104,18 +104,18 @@ const Navbar = () => {
             </NavLink>
             {/* Social Icons in Drawer */}
             <div className="social-icons flex space-x-4 mt-6">
-              <NavLink to="https://github.com/786asifakbar" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/786asifakbar" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github text-3xl hover:text-gray-300"></i>
-              </NavLink>
-              <NavLink to="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-twitter text-3xl hover:text-gray-300"></i>
-              </NavLink>
-              <NavLink to="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin text-3xl hover:text-gray-300"></i>
-              </NavLink>
-              <NavLink to="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-instagram text-3xl hover:text-gray-300"></i>
-              </NavLink>
+              </a>
             </div>
           </div>
         )}

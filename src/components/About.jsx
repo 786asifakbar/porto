@@ -1,9 +1,6 @@
 const About = () => {
   return (
-    <div 
-      className="min-h-screen bg-gradient-to-l from-blue-900 to-gray-900 text-white p-6 md:p-10 
-      flex flex-col md:flex-row md:items-center md:justify-between animate-fadeIn"
-    >
+    <div className="min-h-screen bg-gradient-to-l from-blue-900 to-gray-900 text-white p-6 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between animate-fadeIn">
       <div className="flex flex-col md:flex-row md:items-center animate-fadeRight">
         <img
           src="/about.png"
@@ -35,7 +32,7 @@ const About = () => {
               { label: "Hobbies", value: "Coding, Traveling, Art" },
               { label: "Email", value: "asifakbar@meacademy.pk" },
             ].map((item, index) => (
-              <div className={`animate-fadeUp delay-${index * 50}`}>
+              <div className={`animate-fadeUp delay-${index * 50}`} key={index}>
                 <p><span className="font-semibold">{item.label}:</span> {item.value}</p>
               </div>
             ))}

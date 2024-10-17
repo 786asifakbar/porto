@@ -28,19 +28,19 @@ const Projects = () => {
       title: 'Project One',
       description: 'A cool project that I worked on using React and CSS.',
       languages: ['React', 'CSS'],
-      link: '#',
+      link: '#', // Replace with the actual project link
     },
     {
       title: 'Project Two',
       description: 'Another awesome project with amazing features.',
       languages: ['JavaScript', 'Node.js'],
-      link: '#',
+      link: '#', // Replace with the actual project link
     },
     {
       title: 'Project Three',
       description: 'A web application built with HTML, CSS, and JavaScript.',
       languages: ['HTML', 'CSS', 'JavaScript'],
-      link: '#',
+      link: '#', // Replace with the actual project link
     },
   ];
 
@@ -61,7 +61,11 @@ const Projects = () => {
                   ))}
                 </ul>
               </div>
-              <a href={project.link} className="btn mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+              <a
+                href={project.link}
+                className="btn mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300"
+                aria-label={`View project: ${project.title}`}
+              >
                 View Project
               </a>
             </div>

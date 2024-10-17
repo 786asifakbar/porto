@@ -15,8 +15,8 @@ const Skills = () => {
   useEffect(() => {
     const elements = document.querySelectorAll('.fade-up');
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-fadeInUp');
           } else {
@@ -27,7 +27,7 @@ const Skills = () => {
       { threshold: 0.1 }
     );
 
-    elements.forEach(element => {
+    elements.forEach((element) => {
       observer.observe(element);
     });
 
@@ -44,6 +44,8 @@ const Skills = () => {
               key={index}
               className="skill-card fade-up p-5 border rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
               style={{ animationDelay: `${index * 0.2}s`, color: skill.color }}
+              aria-label={`Skill: ${skill.name}`}
+              role="article"
             >
               <div className="skill-icon text-4xl mb-2">{skill.icon}</div>
               <span className="skill-name text-lg font-semibold">{skill.name}</span>

@@ -13,9 +13,11 @@ const Contact = () => {
         }
       });
     };
+
     window.addEventListener('scroll', handleScrollAnimation);
     // Trigger animation on mount
     handleScrollAnimation();
+
     return () => {
       window.removeEventListener('scroll', handleScrollAnimation);
     };
@@ -35,12 +37,12 @@ const Contact = () => {
               width="100%"
               height="300"
               style={{ border: 0 }}
-              allowFullScreen=""
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="rounded-lg shadow-lg"
               title="Google Map Location"
-            ></iframe>
+            />
           </div>
           <div className="text-center lg:text-left">
             <h3 className="text-3xl md:text-5xl font-semibold mb-4">Get in Touch</h3>
@@ -82,7 +84,7 @@ const Contact = () => {
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 rows="5"
                 placeholder="Your Message"
-              ></textarea>
+              />
             </div>
             <button
               type="submit"

@@ -4,7 +4,7 @@ const services = [
   {
     title: 'Web Design',
     description: 'Professional and modern web design services.',
-    icon: '🌐',
+    icon: '🌐', // Consider replacing this with an icon from an icon library
   },
   {
     title: 'Full Stack Development',
@@ -81,6 +81,7 @@ const Services = () => {
               key={index}
               className="service-card zoom-in p-5 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300"
               style={{ animationDelay: `${index * 0.3}s` }}
+              aria-label={`Service: ${service.title}`}
             >
               <div className="service-icon text-4xl text-blue-600">{service.icon}</div>
               <h3 className="service-title text-xl font-semibold mt-2">{service.title}</h3>
