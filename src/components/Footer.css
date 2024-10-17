@@ -1,0 +1,53 @@
+/* Import FontAwesome Icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Footer styles */
+footer {
+  background-color: #3b82f6; /* Tailwind's bg-blue-600 */
+  color: white;
+  padding: 1.5rem 0; /* Tailwind's py-6 */
+}
+
+.container {
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 640px) { /* Tailwind's sm */
+  .container {
+    flex-direction: row;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sm\:text-left {
+  text-align: left; /* Tailwind's sm:text-left */
+}
+
+.mb-4 {
+  margin-bottom: 1rem; /* Tailwind's mb-4 */
+}
+
+.sm\:mb-0 {
+  margin-bottom: 0; /* Tailwind's sm:mb-0 */
+}
+
+.flex {
+  display: flex;
+}
+
+.space-x-6 > * + * {
+  margin-left: 1.5rem; /* Tailwind's space-x-6 */
+}
+
+.hover\:text-gray-300:hover {
+  color: #d1d5db; /* Tailwind's text-gray-300 */
+  transition: color 0.3s ease;
+}
