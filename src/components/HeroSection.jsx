@@ -1,6 +1,11 @@
+import About from './About';
+import Skills from './Skills';
+import Services from './Services';
+import Projects from './Projects';
+import Contact from './Contact';
 import Typical from 'react-typical';
 
-const Home = () => {
+const HeroSection = () => {
   return (
     <>
       <div
@@ -20,8 +25,8 @@ const Home = () => {
               className="text-blue-600"
             />
           </h1>
-          <p className="text-2xl mt-5 mb-6 text-white">
-            Master the most in-demand technologies and <br />become a MERN-Stack developer.
+          <p className="text-xl md:text-2xl mt-5 mb-6 text-white">
+            Master the most in-demand technologies and <br /> become a MERN-Stack developer.
           </p>
           <div className="flex justify-center md:justify-start mt-5 space-x-4">
             <button 
@@ -45,12 +50,17 @@ const Home = () => {
           <img
             src="/enhancerImage.png" // Replace with your image source
             alt="Hero"
-            className="w-96 float-end p-0 rounded-s-full"
+            className="w-full md:w-96 rounded-md shadow-lg transition-transform duration-500 transform hover:scale-105"
           />
         </div>
       </div>
+      <About />
+      <Skills />
+      <Services />
+      <Projects />
+      <Contact />
     </>
   );
 };
 
-export default Home;
+export default HeroSection;

@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import './Services.css'; // Import custom CSS for styling
 
 const services = [
   {
@@ -9,7 +8,7 @@ const services = [
   },
   {
     title: 'Full Stack Development',
-    description: 'Developing robust full-stack applications using MERN stack.',
+    description: 'Developing robust full-stack applications using the MERN stack.',
     icon: '💻',
   },
   {
@@ -44,7 +43,7 @@ const services = [
   },
   {
     title: 'Tailwind CSS & Material UI',
-    description: 'Delivering clean, maintainable, and scalable code.',
+    description: 'Using Tailwind CSS and Material UI for stylish, responsive designs.',
     icon: '🎨',
   },
 ];
@@ -53,8 +52,8 @@ const Services = () => {
   useEffect(() => {
     const elements = document.querySelectorAll('.fade-up, .zoom-in');
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate');
           } else {
@@ -65,7 +64,7 @@ const Services = () => {
       { threshold: 0.1 }
     );
 
-    elements.forEach(element => {
+    elements.forEach((element) => {
       observer.observe(element);
     });
 
@@ -73,19 +72,19 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="services-section">
-      <div className="container">
-        <h2 className="services-title fade-up">My Services</h2>
-        <div className="services-grid">
+    <section id="services" className="services-section py-10 bg-gray-100">
+      <div className="container mx-auto">
+        <h2 className="services-title fade-up text-3xl font-bold text-center mb-8">My Services</h2>
+        <div className="services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="service-card zoom-in"
+              className="service-card zoom-in p-5 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300"
               style={{ animationDelay: `${index * 0.3}s` }}
             >
-              <div className="service-icon">{service.icon}</div>
-              <h3 className="service-title">{service.title}</h3>
-              <p className="service-description">{service.description}</p>
+              <div className="service-icon text-4xl text-blue-600">{service.icon}</div>
+              <h3 className="service-title text-xl font-semibold mt-2">{service.title}</h3>
+              <p className="service-description mt-2">{service.description}</p>
             </div>
           ))}
         </div>

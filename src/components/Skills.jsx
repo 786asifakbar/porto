@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import './Skills.css'; // Importing external CSS
 
 const skills = [
   { name: "HTML", icon: "🌐", color: "#E44D26" },
@@ -36,23 +35,18 @@ const Skills = () => {
   }, []);
 
   return (
-    <section id="skills" className="skills-section">
-      <div className="container">
-        <h2 className="skills-title fade-up">Skills</h2>
-        <div className="skills-grid">
+    <section id="skills" className="skills-section py-10 bg-gray-100">
+      <div className="container mx-auto">
+        <h2 className="skills-title text-3xl font-bold text-center mb-8 fade-up">Skills</h2>
+        <div className="skills-grid grid grid-cols-2 md:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="skill-card fade-up"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="skill-card fade-up p-5 border rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              style={{ animationDelay: `${index * 0.2}s`, color: skill.color }}
             >
-              <div
-                className="skill-icon"
-                style={{ color: skill.color }}
-              >
-                {skill.icon}
-              </div>
-              <span className="skill-name">{skill.name}</span>
+              <div className="skill-icon text-4xl mb-2">{skill.icon}</div>
+              <span className="skill-name text-lg font-semibold">{skill.name}</span>
             </div>
           ))}
         </div>

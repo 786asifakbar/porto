@@ -1,105 +1,82 @@
-@keyframes zoomOut {
-       0% {
-         transform: scale(1.2);
-         opacity: 0;
-       }
-       100% {
-         transform: scale(1);
-         opacity: 1;
-       }
-     }
-     
-     @keyframes fadeRight {
-       0% {
-         transform: translateX(-50%);
-         opacity: 0;
-       }
-       100% {
-         transform: translateX(0);
-         opacity: 1;
-       }
-     }
-     
-     @keyframes fadeLeft {
-       0% {
-         transform: translateX(50%);
-         opacity: 0;
-       }
-       100% {
-         transform: translateX(0);
-         opacity: 1;
-       }
-     }
-     
-     .animate-zoomOut {
-       animation: zoomOut 1s ease-out forwards;
-     }
-     
-     .animate-fadeRight {
-       animation: fadeRight 1.2s ease-out forwards;
-     }
-     
-     .animate-fadeLeft {
-       animation: fadeLeft 1.2s ease-out forwards;
-     }
-     
-     @keyframes zoomIn {
-       0% {
-         transform: scale(0.5);
-         opacity: 0;
-       }
-       100% {
-         transform: scale(1);
-         opacity: 1;
-       }
-     }
-     
-     @keyframes fadeRight {
-       0% {
-         transform: translateX(-100%);
-         opacity: 0;
-       }
-       100% {
-         transform: translateX(0);
-         opacity: 1;
-       }
-     }
-     
-     @keyframes fadeLeft {
-       0% {
-         transform: translateX(100%);
-         opacity: 0;
-       }
-       100% {
-         transform: translateX(0);
-         opacity: 1;
-       }
-     }
-     
-     @keyframes fadeUp {
-       0% {
-         transform: translateY(100%);
-         opacity: 0;
-       }
-       100% {
-         transform: translateY(0);
-         opacity: 1;
-       }
-     }
-     
-     .animate-zoomIn {
-       animation: zoomIn 1s ease-out forwards;
-     }
-     
-     .animate-fadeRight {
-       animation: fadeRight 1.2s ease-out forwards;
-     }
-     
-     .animate-fadeLeft {
-       animation: fadeLeft 1.2s ease-out forwards;
-     }
-     
-     .animate-fadeUp {
-       animation: fadeUp 1.2s ease-out forwards;
-     }
-     
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeRight {
+    from {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeLeft {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Add Tailwind utility classes for custom animations */
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+  
+  .animate-fadeRight {
+    animation: fadeRight 0.5s ease-in forwards;
+  }
+  
+  .animate-fadeLeft {
+    animation: fadeLeft 0.5s ease-in forwards;
+  }
+  
+  .animate-zoomIn {
+    animation: zoomIn 0.5s ease-in forwards;
+  }
+  
+  .animate-fadeUp {
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-fadeInUp {
+    animation: fadeInUp 0.5s ease-in forwards;
+  }
+  
