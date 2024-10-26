@@ -11,16 +11,20 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-blue-600 text-white shadow-lg">
-        <div className="nav-container flex justify-between items-center p-4">
+      <nav className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl transform-gpu">
+        <div className="nav-container flex justify-between items-center p-7 transform transition-all duration-300 ease-out">
           {/* Logo */}
-          <div className="logo">
-            <img src="/blue.png" alt="Logo" className="h-10" />
+          <div className="logo transform transition-transform duration-500 hover:scale-105">
+            <img src="/blue.png" alt="Logo" className="h-24 w-24 rounded-full shadow-lg" />
           </div>
 
           {/* Hamburger Menu Button for Mobile */}
           <div className="hamburger md:hidden">
-            <button onClick={toggleDrawer} aria-label="Toggle navigation">
+            <button
+              onClick={toggleDrawer}
+              aria-label="Toggle navigation"
+              className="transform transition-transform duration-500 hover:scale-125"
+            >
               <svg
                 className="w-8 h-8 text-white"
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,42 +43,49 @@ const Navbar = () => {
           </div>
 
           {/* Links for larger screens */}
-          <div className="links hidden md:flex space-x-4">
-            <NavLink exact to="/" activeClassName="font-semibold" className="hover:text-gray-300">
-              Home
-            </NavLink>
-            <NavLink to="/about" activeClassName="font-semibold" className="hover:text-gray-300">
-              About
-            </NavLink>
-            <NavLink to="/projects" activeClassName="font-semibold" className="hover:text-gray-300">
-              Projects
-            </NavLink>
-            <NavLink to="/contact" activeClassName="font-semibold" className="hover:text-gray-300">
-              Contact
-            </NavLink>
+          <div className="links hidden md:flex space-x-6 text-lg font-semibold">
+            {['Home', 'About', 'Projects', 'Contact'].map((text, idx) => (
+              <NavLink
+                key={idx}
+                exact
+                to={`/${text.toLowerCase()}`}
+                activeClassName="text-yellow-400 shadow-lg transform scale-105"
+                className="hover:text-yellow-300 transform transition-transform duration-300 ease-out hover:scale-110"
+              >
+                {text}
+              </NavLink>
+            ))}
           </div>
 
           {/* Social Media Icons */}
           <div className="social-icons hidden md:flex space-x-4">
-            <a href="https://github.com/786asifakbar" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-github text-xl hover:text-gray-300"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter text-xl hover:text-gray-300"></i>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin text-xl hover:text-gray-300"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram text-xl hover:text-gray-300"></i>
-            </a>
+            {[
+              { href: 'https://github.com/786asifakbar', icon: 'fab fa-github' },
+              { href: 'https://twitter.com', icon: 'fab fa-twitter' },
+              { href: 'https://www.linkedin.com', icon: 'fab fa-linkedin' },
+              { href: 'https://www.instagram.com', icon: 'fab fa-instagram' }
+            ].map(({ href, icon }, idx) => (
+              <a
+                key={idx}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl transform transition-transform duration-500 ease-out hover:scale-110"
+              >
+                <i className={`${icon} hover:text-yellow-300`}></i>
+              </a>
+            ))}
           </div>
         </div>
 
         {/* Drawer for Mobile */}
         {drawerOpen && (
-          <div className="drawer fixed inset-0 bg-blue-600 bg-opacity-95 z-50 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out transform">
-            <button onClick={toggleDrawer} className="absolute top-4 right-6 text-white" aria-label="Close navigation">
+          <div className="drawer fixed inset-0 bg-gradient-to-b from-indigo-600 to-purple-700 bg-opacity-95 z-50 flex flex-col items-center justify-center transition-transform duration-500 ease-in-out transform">
+            <button
+              onClick={toggleDrawer}
+              className="absolute top-4 right-6 text-white hover:text-yellow-400 transform transition-transform duration-500 ease-out hover:scale-110"
+              aria-label="Close navigation"
+            >
               <svg
                 className="w-8 h-8"
                 xmlns="http://www.w3.org/2000/svg"
@@ -90,32 +101,36 @@ const Navbar = () => {
                 />
               </svg>
             </button>
-            <NavLink exact to="/" onClick={toggleDrawer} className="text-2xl text-white my-2">
-              Home
-            </NavLink>
-            <NavLink to="/about" onClick={toggleDrawer} className="text-2xl text-white my-2">
-              About
-            </NavLink>
-            <NavLink to="/projects" onClick={toggleDrawer} className="text-2xl text-white my-2">
-              Projects
-            </NavLink>
-            <NavLink to="/contact" onClick={toggleDrawer} className="text-2xl text-white my-2">
-              Contact
-            </NavLink>
+            {['Home', 'About', 'Projects', 'Contact'].map((text, idx) => (
+              <NavLink
+                key={idx}
+                exact
+                to={`/${text.toLowerCase()}`}
+                onClick={toggleDrawer}
+                className="text-3xl text-white my-3 transform transition-transform duration-500 ease-out hover:scale-110 hover:text-yellow-400"
+              >
+                {text}
+              </NavLink>
+            ))}
+
             {/* Social Icons in Drawer */}
-            <div className="social-icons flex space-x-4 mt-6">
-              <a href="https://github.com/786asifakbar" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-github text-3xl hover:text-gray-300"></i>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter text-3xl hover:text-gray-300"></i>
-              </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-linkedin text-3xl hover:text-gray-300"></i>
-              </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-instagram text-3xl hover:text-gray-300"></i>
-              </a>
+            <div className="social-icons flex space-x-6 mt-6">
+              {[
+                { href: 'https://github.com/786asifakbar', icon: 'fab fa-github' },
+                { href: 'https://twitter.com', icon: 'fab fa-twitter' },
+                { href: 'https://www.linkedin.com', icon: 'fab fa-linkedin' },
+                { href: 'https://www.instagram.com', icon: 'fab fa-instagram' }
+              ].map(({ href, icon }, idx) => (
+                <a
+                  key={idx}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-4xl text-white hover:text-yellow-400 transform transition-transform duration-500 ease-out hover:scale-125"
+                >
+                  <i className={`${icon}`}></i>
+                </a>
+              ))}
             </div>
           </div>
         )}
