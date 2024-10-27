@@ -28,42 +28,89 @@ const Projects = () => {
       title: 'Project One',
       description: 'A cool project that I worked on using React and CSS.',
       languages: ['React', 'CSS'],
-      link: '#', // Replace with the actual project link
+      link: '#', // Replace with actual project link
+      image: 'https://via.placeholder.com/400x200', // Replace with actual image URL
     },
     {
       title: 'Project Two',
       description: 'Another awesome project with amazing features.',
       languages: ['JavaScript', 'Node.js'],
-      link: '#', // Replace with the actual project link
+      link: '#',
+      image: 'https://via.placeholder.com/400x200',
     },
     {
       title: 'Project Three',
       description: 'A web application built with HTML, CSS, and JavaScript.',
       languages: ['HTML', 'CSS', 'JavaScript'],
-      link: '#', // Replace with the actual project link
+      link: '#',
+      image: 'https://via.placeholder.com/400x200',
+    },
+    {
+      title: 'Project Four',
+      description: 'A full-stack MERN project with a modern UI.',
+      languages: ['MongoDB', 'Express', 'React', 'Node.js'],
+      link: '#',
+      image: 'https://via.placeholder.com/400x200',
+    },
+    {
+      title: 'Project Five',
+      description: 'An e-commerce website with payment integration.',
+      languages: ['React', 'Node.js', 'Stripe API'],
+      link: '#',
+      image: 'https://via.placeholder.com/400x200',
+    },
+    {
+      title: 'Project Six',
+      description: 'A mobile-friendly web app with custom animations.',
+      languages: ['React', 'Tailwind CSS'],
+      link: '#',
+      image: 'https://via.placeholder.com/400x200',
     },
   ];
 
   return (
-    <section id="projects" className="projects-section py-10 bg-gray-100">
-      <div className="container mx-auto">
-        <h2 className="title fade-up text-3xl font-bold text-center mb-8">Portfolio</h2>
-        <div className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section 
+      id="projects" 
+      className="projects-section py-10 bg-gradient-to-r from-black via-gray-800 to-gray-900 text-white relative overflow-hidden"
+    >
+      <div className="container mx-auto px-4">
+        <h2 
+          className="title fade-up text-4xl font-bold text-center mb-10 tracking-wide" 
+          style={{ textShadow: '2px 2px 8px rgba(128, 0, 128, 0.6)' }} // Purple shadow
+        >
+          Portfolio
+        </h2>
+        <div className="projects-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <div key={index} className="project-card zoom-in p-5 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="project-title text-xl font-semibold">{project.title}</h3>
-              <p className="project-description mt-2">{project.description}</p>
-              <div className="project-languages mt-4">
-                <h4 className="languages-title font-medium">Technologies:</h4>
-                <ul className="list-disc list-inside">
+            <div
+              key={index}
+              className="project-card zoom-in bg-white text-black p-5 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 hover:scale-105 flex flex-col items-center" // Added flex and items-center for centering
+              style={{
+                animationDelay: `${index * 0.2}s`,
+                background: 'rgba(255, 255, 255, 0.1)', // Semi-transparent overlay
+                backdropFilter: 'blur(10px)', // Frosted glass effect
+                border: '1px solid rgba(255, 255, 255, 0.2)', // Light border
+                boxShadow: '0 4px 30px rgba(128, 0, 128, 0.5)', // Purple shadow
+              }}
+            >
+              <div className="project-image mb-4">
+                <img src={project.image} alt={`${project.title} screenshot`} className="w-full h-48 object-cover rounded-md" />
+              </div>
+              <h3 className="project-title text-2xl font-semibold mb-2 text-gray-100 text-center">{project.title}</h3> {/* Centered text */}
+              <p className="project-description mt-2 text-gray-300 text-center">{project.description}</p> {/* Centered text */}
+              <div className="project-languages mt-4 text-center"> {/* Centered content */}
+                <h4 className="languages-title font-medium text-indigo-400">Technologies:</h4> {/* Label above technologies */}
+                <div className="flex justify-center space-x-2 mt-1"> {/* Flex container for inline display */}
                   {project.languages.map((language, langIndex) => (
-                    <li key={langIndex}>{language}</li>
+                    <span key={langIndex} className="text-gray-300">{language}</span> // Individual language display
                   ))}
-                </ul>
+                </div>
               </div>
               <a
                 href={project.link}
-                className="btn mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn mt-6 inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300 transform hover:scale-105"
                 aria-label={`View project: ${project.title}`}
               >
                 View Project

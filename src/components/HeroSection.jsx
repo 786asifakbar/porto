@@ -14,12 +14,12 @@ const HeroSection = () => {
         style={{ perspective: '1000px' }}
       >
         {/* Left Side: Heading with Typing Effect and Buttons */}
-        <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0 transform transition-transform duration-700 hover:rotate-y-6">
+        <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0 transform transition-transform duration-700 hover:rotate-6">
           <h1
             className="text-5xl font-bold sm:text-3xl md:text-5xl lg:text-8xl leading-tight tracking-wider text-transparent bg-clip-text"
             style={{
               backgroundImage: 'linear-gradient(to right, #30cfd0, #330867)',
-              textShadow: '2px 2px 0 #f39c12, 4px 4px 0 #e74c3c, 6px 6px 0 #8e44ad',
+              textShadow: '2px 2px 0 rgba(241, 196, 15, 0.8), 4px 4px 0 rgba(231, 76, 60, 0.8), 6px 6px 0 rgba(142, 68, 173, 0.8)',
             }}
           >
             I am <br />
@@ -30,7 +30,7 @@ const HeroSection = () => {
               className="text-transparent bg-clip-text font-extrabold"
               style={{
                 backgroundImage: 'linear-gradient(to right, #30cfd0, #330867)',
-                textShadow: '2px 2px 0 #f39c12, 4px 4px 0 #e74c3c, 6px 6px 0 #8e44ad',
+                textShadow: '2px 2px 0 rgba(241, 196, 15, 0.8), 4px 4px 0 rgba(231, 76, 60, 0.8), 6px 6px 0 rgba(142, 68, 173, 0.8)',
               }}
             />
           </h1>
@@ -54,12 +54,15 @@ const HeroSection = () => {
         </div>
 
         {/* Right Side: Image */}
-        <div className="md:w-1/2 transform transition-transform duration-500 hover:rotate-y-6 hover:scale-105">
+        <div className="md:w-1/2 transform transition-transform duration-500 hover:rotate-6 hover:scale-105">
           <img
             src="/enhancerImage.png" // Replace with your image source
             alt="Hero"
             className="w-full md:w-96 rounded-md shadow-2xl"
-            style={{ transform: 'rotateY(-15deg)', boxShadow: '8px 8px 20px rgba(0, 0, 0, 0.4)' }}
+            style={{
+              transform: 'rotateY(-15deg)',
+              boxShadow: '8px 8px 20px rgba(0, 0, 0, 0.4)',
+            }}
           />
         </div>
       </div>
@@ -72,4 +75,5 @@ const HeroSection = () => {
     </>
   );
 };
+
 export default HeroSection;
