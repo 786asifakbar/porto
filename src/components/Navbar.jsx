@@ -13,9 +13,11 @@ const Navbar = () => {
       {/* Navbar */}
       <nav className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl transform-gpu">
         <div className="nav-container flex justify-between items-center p-7 transform transition-all duration-300 ease-out">
-          {/* Logo */}
+          {/* Logo with Link to Home */}
           <div className="logo transform transition-transform duration-500 hover:scale-105">
-            <img src="/blue.png" alt="Logo" className="h-24 w-24 rounded-full shadow-lg" />
+            <NavLink to="/" aria-label="Home">
+              <img src="/blue.png" alt="Logo" className="h-24 w-24 rounded-full shadow-lg" />
+            </NavLink>
           </div>
 
           {/* Hamburger Menu Button for Mobile */}
