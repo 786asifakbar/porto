@@ -25,25 +25,25 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Project One',
-      description: 'A cool project that I worked on using React and CSS.',
-      languages: ['React', 'CSS'],
-      link: '#', // Replace with actual project link
-      image: 'https://via.placeholder.com/400x200', // Replace with actual image URL
+      title: 'My Portfolio',
+      description: 'A cool project that I worked on using React and Tailwindcss.',
+      languages: ['React', 'Tailwindcss'],
+      link: 'https://porto-mu-peach.vercel.app/', // Replace with actual project link
+      image: 'blue.png', // Replace with actual image URL
     },
     {
-      title: 'Project Two',
+      title: 'Help Human Right Orginization',
       description: 'Another awesome project with amazing features.',
-      languages: ['JavaScript', 'Node.js'],
-      link: '#',
-      image: 'https://via.placeholder.com/400x200',
+      languages: ['React Js', 'Tailwindcss'],
+      link: 'https://project-wine-omega-21.vercel.app/',
+      image: 'hero.png',
     },
     {
-      title: 'Project Three',
+      title: 'NexousTech',
       description: 'A web application built with HTML, CSS, and JavaScript.',
       languages: ['HTML', 'CSS', 'JavaScript'],
-      link: '#',
-      image: 'https://via.placeholder.com/400x200',
+      link: 'https://software-kappa-two.vercel.app/',
+      image: './hero.png',
     },
     {
       title: 'Project Four',
