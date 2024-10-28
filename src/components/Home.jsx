@@ -51,22 +51,18 @@ const Home = () => {
         {/* Left Side: Heading with Typing Effect and Buttons */}
         <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0 transform transition-transform duration-700 hover:rotate-6">
           <h1
-            className="text-5xl font-bold sm:text-3xl md:text-5xl lg:text-8xl leading-tight tracking-wider text-transparent bg-clip-text"
+            className="text-5xl font-bold sm:text-3xl md:text-5xl lg:text-8xl leading-tight tracking-wider"
             style={{
-              backgroundImage: 'linear-gradient(to right, purple, black)',
-              WebkitBackgroundClip: 'text',
-              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(128, 0, 128, 0.6)', // Creates a 3D shadow effect
+              color: 'white', // Set the color to white
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(255, 255, 255, 0.6)', // Adjust shadow for better visibility
             }}
           >
             I am <br />
             <span
-              className="text-transparent bg-clip-text font-extrabold "
+              className="font-extrabold animate-pulse"
               style={{
-                backgroundImage: index % 2 === 0 
-                  ? 'linear-gradient(to right, blue, purple)' // Gradient for "Asif Akbar"
-                  : 'linear-gradient(to right, purple, blue)', // Gradient for "MERN Stack Developer"
-                WebkitBackgroundClip: 'text',
-                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(128, 0, 128, 0.6)', // Adds depth with purple-black gradient
+                color: 'white', // Set the color to white
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(255, 255, 255, 0.6)',
               }}
             >
               {text}
