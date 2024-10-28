@@ -39,7 +39,7 @@ const Contact = () => {
         <div className="w-full lg:w-1/2 flex flex-col lg:flex-row items-center lg:items-start mb-8 lg:mb-0 animate-on-scroll space-y-8 lg:space-y-0 lg:space-x-8">
           <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
             <iframe
-              src="https://www.google.com/maps/embed/v1/place?q=Gorikh%20Line%20Near%20PNS%20Shifa%20Hospital%20Karachi&key=YOUR_API_KEY"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.0567626221214!2d67.06078377460341!3d24.896045377906063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f74156c5323%3A0x257f1b15998551b7!2sHelp%20Human%20Rights%20Organization%20Of%20Pakistan!5e0!3m2!1sen!2s!4v1730112820062!5m2!1sen!2s" 
               width="100%"
               height="300"
               style={{ border: 0 }}

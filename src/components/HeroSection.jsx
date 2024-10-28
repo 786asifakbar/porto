@@ -52,20 +52,20 @@ const HeroSection = () => {
           <h1
             className="text-5xl font-bold sm:text-3xl md:text-5xl lg:text-8xl leading-tight tracking-wider text-transparent bg-clip-text"
             style={{
-              backgroundImage: 'linear-gradient(to right, purple, black)',
+              backgroundImage: 'linear-gradient(to right, lime, #000)', // Lime to black gradient
               WebkitBackgroundClip: 'text',
-              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(128, 0, 128, 0.6)', // Creates a 3D shadow effect
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(255, 255, 255, 0.6)', // Creates a 3D shadow effect
             }}
           >
             I am <br />
             <span
-              className="text-transparent bg-clip-text font-extrabold "
+              className="text-transparent bg-clip-text font-extrabold"
               style={{
                 backgroundImage: index % 2 === 0 
-                  ? 'linear-gradient(to right, blue, purple)' // Gradient for "Asif Akbar"
-                  : 'linear-gradient(to right, purple, blue)', // Gradient for "MERN Stack Developer"
+                  ? 'linear-gradient(to right, lime, #00ff00' // Gradient for "Asif Akbar"
+                  : 'linear-gradient(to right,#00ffff, lime)', // Gradient for "MERN Stack Developer"
                 WebkitBackgroundClip: 'text',
-                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(128, 0, 128, 0.6)', // Adds depth with purple-black gradient
+                textShadow: '2px 2px 5px rgba(0, 0, 0, 0.8), 4px 4px 10px rgba(255, 255, 255, 0.5)', // Adds depth with shadow for 3D effect
               }}
             >
               {text}
@@ -76,13 +76,13 @@ const HeroSection = () => {
           </p>
           <div className="flex justify-center md:justify-start mt-5 space-x-6">
             <button
-              className="bg-purple-600 text-white px-8 py-3 rounded-md hover:bg-purple-700 transition duration-300 transform hover:scale-105 shadow-2xl"
+              className="bg-lime-500 text-white px-8 py-3 rounded-md hover:bg-lime-700 transition duration-300 transform hover:scale-105 shadow-2xl"
               style={{ transform: 'perspective(500px) rotateX(10deg)' }}
             >
               Get Started
             </button>
             <button
-              className="border border-purple-600 text-purple-600 px-8 py-3 rounded-md hover:bg-purple-600 hover:text-white transition duration-300 transform hover:scale-105 shadow-lg"
+              className="border border-lime-600 text-lime-600 px-8 py-3 rounded-md hover:bg-lime-600 hover:text-white transition duration-300 transform hover:scale-105 shadow-lg"
               style={{ transform: 'perspective(500px) rotateX(-10deg)' }}
             >
               Learn More

@@ -1,13 +1,14 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-6">
-      <div className="container mx-auto flex flex-col items-center md:flex-row justify-between px-4 sm:px-6 lg:px-8">
-        <p className="text-center sm:text-left mb-4 sm:mb-0">
+    <footer className="text-white py-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl">
+      <div className="container mx-auto flex flex-col items-center px-4 sm:px-6 lg:px-8">
+        {/* Centered Text */}
+        <p className="text-center mb-4">
           &copy; 2024 My Portfolio. All rights reserved.
         </p>
 
-        {/* Social Media Icons */}
-        <div className="flex space-x-4">
+        {/* Centered Social Media Icons */}
+        <div className="flex space-x-4 justify-center">
           <a
             href="https://twitter.com"
             target="_blank"
