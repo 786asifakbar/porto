@@ -52,7 +52,7 @@ const Skills = () => {
 
       <div className="container mx-auto relative z-10">
         <h2
-          className="skills-title text-5xl font-bold text-center mb-8 fade-up tracking-wide"
+          className="skills-title text-center mb-8 fade-up tracking-wide text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 text-shadow-lg"
           style={{ textShadow: '2px 2px 6px rgba(128, 0, 128, 0.6)' }} // Purple shadow
         >
           Skills

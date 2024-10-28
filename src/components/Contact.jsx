@@ -59,7 +59,9 @@ const Contact = () => {
         </div>
 
         <div className="w-full lg:w-1/2 animate-on-scroll">
-          <h2 className="text-3xl md:text-5xl font-bold text-center mb-10 tracking-wider shadow-lg" style={{ textShadow: '2px 2px 12px rgba(128, 0, 128, 0.8)' }}>
+          <h2 className="text-5xl md:text-5xl text-center mb-10 shadow-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg
+          
+          " style={{ textShadow: '2px 2px 12px rgba(128, 0, 128, 0.8)' }}>
             Contact Me
           </h2>
           <form className="w-full max-w-lg mx-auto space-y-6 bg-gray-800 bg-opacity-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">

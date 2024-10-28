@@ -12,7 +12,7 @@ const HeroSection = () => {
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const phrases = ['Asif Akbar', 'MERN_Stack Developer'];
+  const phrases = ['Asif Akbar', 'MERN Stack Developer'];
 
   useEffect(() => {
     const handleTyping = () => {
@@ -59,9 +59,11 @@ const HeroSection = () => {
           >
             I am <br />
             <span
-              className="text-transparent bg-clip-text font-extrabold"
+              className="text-transparent bg-clip-text font-extrabold "
               style={{
-                backgroundImage: 'linear-gradient(to right, purple, black)',
+                backgroundImage: index % 2 === 0 
+                  ? 'linear-gradient(to right, blue, purple)' // Gradient for "Asif Akbar"
+                  : 'linear-gradient(to right, purple, blue)', // Gradient for "MERN Stack Developer"
                 WebkitBackgroundClip: 'text',
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(128, 0, 128, 0.6)', // Adds depth with purple-black gradient
               }}
@@ -91,9 +93,9 @@ const HeroSection = () => {
         {/* Right Side: Image */}
         <div className="md:w-1/2 transform transition-transform duration-500 hover:rotate-6 hover:scale-105">
           <img
-            src="./asif.png" // Replace with your image source
+            src="./enhancerImage.png" // Replace with your image source
             alt="Hero"
-            className="w-full md:w-96 rounded-md shadow-2xl float-right"
+            className="w-full md:w-96 rounded-full shadow-2xl float-right"
             style={{
               transform: 'rotateY(-1deg)',
               boxShadow: '8px 8px 20px rgba(0, 0, 0, 0.4)',

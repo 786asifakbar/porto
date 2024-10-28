@@ -75,7 +75,7 @@ const Projects = () => {
     >
       <div className="container mx-auto px-4">
         <h2 
-          className="title fade-up text-4xl font-bold text-center mb-10 tracking-wide" 
+          className="title fade-up  text-center mb-10 text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg" 
           style={{ textShadow: '2px 2px 8px rgba(128, 0, 128, 0.6)' }} // Purple shadow
         >
           Portfolio
