@@ -91,7 +91,7 @@ const HeroSection = () => {
         {/* Right Side: Image */}
         <div className="md:w-1/2 transform transition-transform duration-500 hover:rotate-6 hover:scale-105">
           <img
-            src="./asif.jpg" // Replace with your image source
+            src="./asif.png" // Replace with your image source
             alt="Hero"
             className="w-full md:w-96 rounded-md shadow-2xl float-right"
             style={{
