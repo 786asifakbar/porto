@@ -52,16 +52,18 @@ const HeroSection = () => {
           <h1
             className="text-5xl font-bold sm:text-3xl md:text-5xl lg:text-8xl leading-tight tracking-wider text-transparent bg-clip-text"
             style={{
-              backgroundImage: 'linear-gradient(to right, #30cfd0, #330867)',
-              textShadow: '2px 2px 0 rgba(241, 196, 15, 0.8), 4px 4px 0 rgba(231, 76, 60, 0.8), 6px 6px 0 rgba(142, 68, 173, 0.8)',
+              backgroundImage: 'linear-gradient(to right, purple, black)',
+              WebkitBackgroundClip: 'text',
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(128, 0, 128, 0.6)', // Creates a 3D shadow effect
             }}
           >
             I am <br />
             <span
               className="text-transparent bg-clip-text font-extrabold"
               style={{
-                backgroundImage: 'linear-gradient(to right, #30cfd0, #330867)',
-                textShadow: '2px 2px 0 rgba(241, 196, 15, 0.8), 4px 4px 0 rgba(231, 76, 60, 0.8), 6px 6px 0 rgba(142, 68, 173, 0.8)',
+                backgroundImage: 'linear-gradient(to right, purple, black)',
+                WebkitBackgroundClip: 'text',
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(128, 0, 128, 0.6)', // Adds depth with purple-black gradient
               }}
             >
               {text}
@@ -72,13 +74,13 @@ const HeroSection = () => {
           </p>
           <div className="flex justify-center md:justify-start mt-5 space-x-6">
             <button
-              className="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-2xl"
+              className="bg-purple-600 text-white px-8 py-3 rounded-md hover:bg-purple-700 transition duration-300 transform hover:scale-105 shadow-2xl"
               style={{ transform: 'perspective(500px) rotateX(10deg)' }}
             >
               Get Started
             </button>
             <button
-              className="border border-blue-600 text-blue-600 px-8 py-3 rounded-md hover:bg-blue-600 hover:text-white transition duration-300 transform hover:scale-105 shadow-lg"
+              className="border border-purple-600 text-purple-600 px-8 py-3 rounded-md hover:bg-purple-600 hover:text-white transition duration-300 transform hover:scale-105 shadow-lg"
               style={{ transform: 'perspective(500px) rotateX(-10deg)' }}
             >
               Learn More
@@ -89,7 +91,7 @@ const HeroSection = () => {
         {/* Right Side: Image */}
         <div className="md:w-1/2 transform transition-transform duration-500 hover:rotate-6 hover:scale-105">
           <img
-            src="/enhancerImage.png" // Replace with your image source
+            src="./asif.jpg" // Replace with your image source
             alt="Hero"
             className="w-full md:w-96 rounded-md shadow-2xl float-right"
             style={{

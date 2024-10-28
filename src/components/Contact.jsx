@@ -24,9 +24,17 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-10 bg-gradient-to-l from-gray-800 via-gray-900 to-black text-white"
+      className="py-10 text-white relative overflow-hidden"
+      style={{
+        backgroundImage: 'url(other.png)', // Replace with your image path
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center min-h-screen space-y-12 lg:space-y-0 lg:space-x-12">
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-l from-gray-800 via-gray-900 to-black opacity-70"></div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center min-h-screen space-y-12 lg:space-y-0 lg:space-x-12 relative z-10">
         
         <div className="w-full lg:w-1/2 flex flex-col lg:flex-row items-center lg:items-start mb-8 lg:mb-0 animate-on-scroll space-y-8 lg:space-y-0 lg:space-x-8">
           <div className="w-full lg:w-1/2 mb-6 lg:mb-0">

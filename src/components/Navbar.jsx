@@ -103,7 +103,7 @@ const Navbar = () => {
                 />
               </svg>
             </button>
-            {['Home', 'About', 'Projects', 'Contact'].map((text, idx) => (
+            {['', 'About', 'Projects', 'Contact'].map((text, idx) => (
               <NavLink
                 key={idx}
                 exact

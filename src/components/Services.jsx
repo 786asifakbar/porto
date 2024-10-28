@@ -38,10 +38,18 @@ const Services = () => {
   return (
     <section 
       id="services" 
-      className="services-section py-10 bg-gradient-to-r from-black via-gray-800 to-gray-900 text-white relative overflow-hidden"
+      className="services-section py-10 text-white relative overflow-hidden"
+      style={{
+        backgroundImage: 'url(other.png)', // Replace with your image path
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundBlendMode: 'overlay', // Blends with gradient
+      }}
     >
-      {/* Background stars */}
-      <div className="absolute inset-0 bg-[url('/path-to-your-star-image.svg')] bg-cover bg-center opacity-20"></div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-800 to-gray-900 opacity-80"></div>
+      
+      {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <h2 
           className="services-title fade-up text-4xl font-bold text-center mb-10 tracking-wide" 

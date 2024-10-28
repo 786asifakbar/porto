@@ -2,6 +2,12 @@ const About = () => {
   return (
     <div 
       className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-white p-6 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between shadow-2xl relative overflow-hidden"
+      style={{
+        backgroundImage: 'url(other.png)', // Replace with your image path
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
       <div>
         {/* 3D Text Effect for Heading */}

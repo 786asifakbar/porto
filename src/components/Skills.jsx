@@ -39,9 +39,18 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="skills-section py-10 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-white shadow-2xl rounded-lg transform transition-transform hover:scale-105"
+      className="skills-section py-10 text-white shadow-2xl rounded-lg transform transition-transform hover:scale-105 relative overflow-hidden"
+      style={{
+        backgroundImage: 'url(other.png)', // Replace with the path to your image
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundBlendMode: 'overlay', // Blend the image with the gradient
+      }}
     >
-      <div className="container mx-auto">
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 opacity-90"></div>
+
+      <div className="container mx-auto relative z-10">
         <h2
           className="skills-title text-5xl font-bold text-center mb-8 fade-up tracking-wide"
           style={{ textShadow: '2px 2px 6px rgba(128, 0, 128, 0.6)' }} // Purple shadow
