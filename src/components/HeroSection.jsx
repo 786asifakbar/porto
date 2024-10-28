@@ -39,8 +39,13 @@ const HeroSection = () => {
     <>
       <div
         className="flex flex-col md:flex-row items-center justify-between p-8 md:p-16 
-        bg-gradient-to-r from-gray-800 to-gray-900 shadow-2xl"
-        style={{ perspective: '1000px' }}
+        bg-cover bg-center shadow-2xl"
+        style={{
+          perspective: '1000px',
+          backgroundImage: 'url(re.png)', // Replace with your image path
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
         {/* Left Side: Heading with Typing Effect and Buttons */}
         <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0 transform transition-transform duration-700 hover:rotate-6">
@@ -86,9 +91,9 @@ const HeroSection = () => {
           <img
             src="/enhancerImage.png" // Replace with your image source
             alt="Hero"
-            className="w-full md:w-96 rounded-md shadow-2xl"
+            className="w-full md:w-96 rounded-md shadow-2xl float-right"
             style={{
-              transform: 'rotateY(-15deg)',
+              transform: 'rotateY(-1deg)',
               boxShadow: '8px 8px 20px rgba(0, 0, 0, 0.4)',
             }}
           />

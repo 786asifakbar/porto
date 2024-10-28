@@ -36,14 +36,14 @@ const Projects = () => {
       description: 'Another awesome project with amazing features.',
       languages: ['React Js', 'Tailwindcss'],
       link: 'https://project-wine-omega-21.vercel.app/',
-      image: 'hero.png',
+      image: 'help.jpg',
     },
     {
       title: 'NexousTech',
       description: 'A web application built with HTML, CSS, and JavaScript.',
       languages: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://software-kappa-two.vercel.app/',
-      image: './hero.png',
+      image: 'nex.png',
     },
     {
       title: 'Project Four',
