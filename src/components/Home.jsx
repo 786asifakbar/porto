@@ -4,6 +4,7 @@ import Skills from './Skills';
 import Services from './Services';
 import Projects from './Projects';
 import Contact from './Contact';
+import WhatsAppButton from './WhatsAppButton';
 
 const typingSpeed = 100; // Speed of typing effect in milliseconds
 const pauseDuration = 2000; // Duration to pause before changing text
@@ -109,6 +110,7 @@ const Home = () => {
       <Services />
       <Projects />
       <Contact />
+      <WhatsAppButton />
     </>
   );
 };
