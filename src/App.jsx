@@ -6,7 +6,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-// import WhatsAppButton from './components/WhatsAppButton';
+import WhatsAppButton from './components/WhatsAppButton';
 
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/Skills" element={<Skills />} />
         <Route path="/Projects" element={<Projects />} />
         <Route path="/Contact" element={<Contact />} />
-        {/* <Route path="/WhatAppButton" element={<WhatsAppButton />} />  */}
+        <Route path="/WhatAppButton" element={<WhatsAppButton />} /> 
       </Routes>
       <Footer />
       </BrowserRouter>

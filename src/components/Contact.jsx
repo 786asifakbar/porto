@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import WhatsAppButton from './WhatsAppButton';
 
 const Contact = () => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const Contact = () => {
   }, []);
 
   return (
+    <>
     <section
       id="contact"
       className="py-10 text-white relative overflow-hidden"
@@ -99,6 +101,8 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    <WhatsAppButton/>
+    </>
   );
 };
 

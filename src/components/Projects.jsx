@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import WhatsAppButton from './WhatsAppButton';
 
 const Projects = () => {
   useEffect(() => {
@@ -69,6 +70,7 @@ const Projects = () => {
   ];
 
   return (
+    <>
     <section 
       id="projects" 
       className="projects-section py-10 bg-gradient-to-r from-black via-gray-800 to-gray-900 text-white relative overflow-hidden"
@@ -120,6 +122,9 @@ const Projects = () => {
         </div>
       </div>
     </section>
+    
+      <WhatsAppButton />
+    </>
   );
 };
 
