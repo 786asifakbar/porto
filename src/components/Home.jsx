@@ -6,14 +6,14 @@ import Projects from './Projects';
 import Contact from './Contact';
 import WhatsAppButton from './WhatsAppButton';
 
-const typingSpeed = 100; // Speed of typing effect in milliseconds
+const typingSpeed = 90; // Speed of typing effect in milliseconds
 const pauseDuration = 2000; // Duration to pause before changing text
 
 const Home = () => {
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const phrases = ['Asif Akbar', 'MERN Stack Developer'];
+  const phrases = ['Asif Akbar', 'Backend Developer (Node.js)'];
 
   useEffect(() => {
     const handleTyping = () => {
@@ -49,9 +49,9 @@ const Home = () => {
         }}
       >
         {/* Left Side: Heading with Typing Effect and Buttons */}
-        <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0 transform transition-transform duration-700 hover:rotate-6">
+        <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0 transform transition-transform duration-700">
           <h1
-            className="text-5xl font-bold sm:text-3xl md:text-5xl lg:text-8xl leading-tight tracking-wider"
+            className="text-4xl font-bold sm:text-3xl md:text-5xl lg:text-8xl leading-tight tracking-wider"
             style={{
               color: 'white', // Set the color to white
               textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(255, 255, 255, 0.6)', // Adjust shadow for better visibility
@@ -88,14 +88,14 @@ const Home = () => {
         </div>
 
         {/* Right Side: Image */}
-        <div className="md:w-1/2 transform transition-transform duration-500 hover:rotate-6 hover:scale-105">
+        <div className="md:w-1/2 transform transition-transform duration-500">
           <img
             src="./enhancerImage.png" // Replace with your image source
             alt="Hero"
-            className="w-full md:w-96 rounded-full shadow-2xl float-right"
+            className="w-full md:w-96 rounded-full float-right"
             style={{
               transform: 'rotateY(-1deg)',
-              boxShadow: '8px 8px 20px rgba(0, 0, 0, 0.4)',
+              boxShadow: '10px 1px 0px rgba(225, 221, 231, 0.76)',
             }}
           />
         </div>
