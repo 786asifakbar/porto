@@ -44,29 +44,8 @@ const Projects = () => {
       description: 'A web application built with HTML, CSS, and JavaScript.',
       languages: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://software-kappa-two.vercel.app/',
-      image: 'nex.png',
-    },
-    {
-      title: 'Project Four',
-      description: 'A full-stack MERN project with a modern UI.',
-      languages: ['MongoDB', 'Express', 'React', 'Node.js'],
-      link: '#',
-      image: 'https://via.placeholder.com/400x200',
-    },
-    {
-      title: 'Project Five',
-      description: 'An e-commerce website with payment integration.',
-      languages: ['React', 'Node.js', 'Stripe API'],
-      link: '#',
-      image: 'https://via.placeholder.com/400x200',
-    },
-    {
-      title: 'Project Six',
-      description: 'A mobile-friendly web app with custom animations.',
-      languages: ['React', 'Tailwind CSS'],
-      link: '#',
-      image: 'https://via.placeholder.com/400x200',
-    },
+      image: 'nex.PNG',
+    }
   ];
 
   return (
