@@ -1,7 +1,9 @@
 const About = () => {
   return (
     <div 
-      className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-white p-6 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between shadow-2xl relative overflow-hidden"
+       className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 
+       text-white flex flex-col md:flex-row md:items-center md:justify-between
+       shadow-2xl p-12 md:p-16 shadow-2xl"
       style={{
         backgroundImage: 'url(other.png)', // Replace with your image path
         backgroundSize: 'cover',
@@ -16,7 +18,7 @@ const About = () => {
           "
           style={{
             backgroundImage: 'linear-gradient(to right, gray, #8e44ad, #3498db)',
-            textShadow: '3px 3px 8px rgba(128, 0, 128, 0.6)', // Purple shadow
+            textShadow: '0px 0px 1px rgba(238, 228, 238, 0.6)', // Purple shadow
           }}
         >
           About Me
@@ -39,14 +41,12 @@ const About = () => {
         {/* Information Grid with 3D shadow effect */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm mt-5">
           {[
-            { label: "Birthplace", value: "Sukkur, Sindh" },
-            { label: "Born", value: "1993" },
             { label: "Residence", value: "Karachi, Pakistan" },
             { label: "Education", value: "BS(Hons) Information Technology" },
             { label: "Skills", value: "React.js, JavaScript, HTML, CSS, Tailwind CSS, MongoDB, Express.js, Node.js" },
             { label: "Experience", value: "1 year in Frontend Development" },
             { label: "Hobbies", value: "Coding, Traveling, Art" },
-            { label: "Email", value: "asifakbar@meacademy.pk" },
+            { label: "Email", value: "786asifakbar53@gmail.com" },
           ].map((item, index) => (
             <div key={index} className="transition-transform duration-500 transform hover:translate-x-2 hover:-translate-y-2 shadow-lg bg-gradient-to-b from-gray-700 to-purple-800 p-4 rounded-md">
               <p>
@@ -55,7 +55,6 @@ const About = () => {
             </div>
           ))}
         </div>
-
         {/* Download Button with 3D hover effect */}
         <div className="mt-6">
           <a href="/Asif Akbar.pdf" download>
