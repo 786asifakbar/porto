@@ -53,7 +53,7 @@ const Skills = () => {
       <div className="container mx-auto relative z-10">
         <h2
           className="skills-title text-center mb-8 fade-up tracking-wide text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 text-shadow-lg"
-          //style={{ textShadow: '2px 2px 6px rgba(227, 216, 227, 0.6)' }} // Purple shadow
+          style={{ textShadow: '2px 2px 6px rgba(254, 254, 254, 0.6)' }} // Purple shadow
         >
           Skills
         </h2>
@@ -67,7 +67,7 @@ const Skills = () => {
                 animationDelay: `${index * 0.2}s`,
                 color: skill.color,
                 background: `linear-gradient(145deg, ${skill.color}20, #1a202c 80%)`,
-                boxShadow: '0 4px 30px rgba(244, 235, 244, 0.5)', // Purple shadow effect
+                boxShadow: '0 4px 30px rgba(190, 9, 190, 0.5)', // Purple shadow effect
               }}
             >
               <div className="skill-icon text-5xl mb-3 transition-transform transform hover:scale-110">

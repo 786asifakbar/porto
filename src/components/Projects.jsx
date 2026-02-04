@@ -58,7 +58,7 @@ const Projects = () => {
         <h2 
           className="title fade-up text-center mb-10 text-5xl font-extrabold text-transparent 
           bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg" 
-          style={{ textShadow: '2px 2px 8px rgba(128, 0, 128, 0.6)' }} // Purple shadow
+          style={{ textShadow: '2px 2px 8px rgba(254, 254, 254, 0.6)' }} // Purple shadow
         >
           Portfolio
         </h2>
@@ -74,7 +74,7 @@ const Projects = () => {
                 background: 'rgba(255, 255, 255, 0.1)', // Semi-transparent overlay
                 backdropFilter: 'blur(10px)', // Frosted glass effect
                 border: '1px solid rgba(255, 255, 255, 0.2)', // Light border
-                boxShadow: '0 4px 30px rgba(233, 229, 233, 0.5)', // Purple shadow
+                boxShadow: '0 4px 30px rgba(218, 37, 218, 0.5)', // Purple shadow
               }}
             >
               <div className="project-image mb-4">
