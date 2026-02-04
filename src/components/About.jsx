@@ -1,9 +1,9 @@
 const About = () => {
   return (
     <div 
-       className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 
-       text-white flex flex-col md:flex-row md:items-center md:justify-between
-       shadow-2xl p-12 md:p-16 shadow-2xl"
+       className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 
+       text-white p-6 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between
+       shadow-2xl relative overflow-hidden"
       style={{
         backgroundImage: 'url(other.png)', // Replace with your image path
         backgroundSize: 'cover',
@@ -14,11 +14,11 @@ const About = () => {
       <div>
         {/* 3D Text Effect for Heading */}
         <h1
-          className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg
-          "
+          className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text 
+          bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg          "
           style={{
             backgroundImage: 'linear-gradient(to right, gray, #8e44ad, #3498db)',
-            textShadow: '0px 0px 1px rgba(238, 228, 238, 0.6)', // Purple shadow
+            textShadow: '3px 3px 8px rgba(247, 241, 247, 0.6)', // Purple shadow
           }}
         >
           About Me
@@ -55,6 +55,7 @@ const About = () => {
             </div>
           ))}
         </div>
+
         {/* Download Button with 3D hover effect */}
         <div className="mt-6">
           <a href="/Asif Akbar.pdf" download>

@@ -47,13 +47,13 @@ const Services = () => {
       }}
     >
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-800 to-gray-900 opacity-80"></div>
+      <div className="absolute inset-0 opacity-80"></div>
       
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <h2 
           className="services-title fade-up text-center mb-10 text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg" 
-          style={{ textShadow: '2px 2px 8px rgba(128, 0, 128, 0.6)' }} // Purple shadow
+          style={{ textShadow: '2px 2px 8px rgba(246, 241, 246, 0.6)' }} // Purple shadow
         >
           My Services
         </h2>

@@ -52,11 +52,12 @@ const Projects = () => {
     <>
     <section 
       id="projects" 
-      className="projects-section py-10 bg-gradient-to-r from-black via-gray-800 to-gray-900 text-white relative overflow-hidden"
+      className="projects-section py-10 bg-gradient-to-r from-violet-700 via-violet-700 to-violet-700 text-white relative overflow-hidden"
     >
       <div className="container mx-auto px-4">
         <h2 
-          className="title fade-up  text-center mb-10 text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg" 
+          className="title fade-up text-center mb-10 text-5xl font-extrabold text-transparent 
+          bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg" 
           style={{ textShadow: '2px 2px 8px rgba(128, 0, 128, 0.6)' }} // Purple shadow
         >
           Portfolio
@@ -65,17 +66,20 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card zoom-in bg-white text-black p-5 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 hover:scale-105 flex flex-col items-center" // Added flex and items-center for centering
+              className="project-card zoom-in bg-white text-black p-5 rounded-xl 
+              shadow-lg hover:shadow-2xl transition-shadow duration-300 transform
+               hover:-translate-y-2 hover:scale-105 flex flex-col items-center" // Added flex and items-center for centering
               style={{
                 animationDelay: `${index * 0.2}s`,
                 background: 'rgba(255, 255, 255, 0.1)', // Semi-transparent overlay
                 backdropFilter: 'blur(10px)', // Frosted glass effect
                 border: '1px solid rgba(255, 255, 255, 0.2)', // Light border
-                boxShadow: '0 4px 30px rgba(128, 0, 128, 0.5)', // Purple shadow
+                boxShadow: '0 4px 30px rgba(233, 229, 233, 0.5)', // Purple shadow
               }}
             >
               <div className="project-image mb-4">
-                <img src={project.image} alt={`${project.title} screenshot`} className="w-full h-48 object-cover rounded-md" />
+                <img src={project.image} alt={`${project.title} screenshot`}
+                 className="w-full h-48 object-cover rounded-md" />
               </div>
               <h3 className="project-title text-2xl font-semibold mb-2 text-gray-100 text-center">{project.title}</h3> {/* Centered text */}
               <p className="project-description mt-2 text-gray-300 text-center">{project.description}</p> {/* Centered text */}
@@ -91,7 +95,9 @@ const Projects = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn mt-6 inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300 transform hover:scale-105"
+                className="btn mt-6 inline-block bg-purple-600 text-white px-4 py-2 
+                rounded-lg hover:bg-purple-700 transition duration-300 transform 
+                hover:scale-105"
                 aria-label={`View project: ${project.title}`}
               >
                 View Project
