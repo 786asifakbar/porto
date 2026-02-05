@@ -14,12 +14,10 @@ const About = () => {
       <div>
         {/* 3D Text Effect for Heading */}
         <h1
-          className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text 
-          bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg          "
-          style={{
-            backgroundImage: 'linear-gradient(to right, gray, #8e44ad, #3498db)',
-            textShadow: '3px 3px 8px rgba(247, 241, 247, 0.6)', // Purple shadow
-          }}
+           className="services-title fade-up text-center mb-10 text-5xl font-extrabold
+           text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-violet-600 
+           tracking-wide text-shadow-lg" 
+          style={{ textShadow: '1px 1px 2px rgba(246, 241, 246, 0.6)' }} // Purple shadow
         >
           About Me
         </h1>

@@ -13,7 +13,7 @@ const Home = () => {
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const phrases = ['Asif Akbar', 'Backend' , 'Developer' , '(Node.js)'];
+  const phrases = ['Asif Akbar', 'Backend Developer (Node.js)'];
 
   useEffect(() => {
     const handleTyping = () => {

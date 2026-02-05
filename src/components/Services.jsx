@@ -52,8 +52,10 @@ const Services = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <h2 
-          className="services-title fade-up text-center mb-10 text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg" 
-          style={{ textShadow: '2px 2px 8px rgba(246, 241, 246, 0.6)' }} // Purple shadow
+          className="services-title fade-up text-center mb-10 text-5xl font-extrabold
+           text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-violet-600 
+           tracking-wide text-shadow-lg" 
+          style={{ textShadow: '1px 1px 2px rgba(246, 241, 246, 0.6)' }} // Purple shadow
         >
           My Services
         </h2>
