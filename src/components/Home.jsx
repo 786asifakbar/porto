@@ -106,6 +106,7 @@ const Home = () => {
       <Projects />
       <Contact />
       <WhatsAppButton />
+  
     </>
   );
 };
