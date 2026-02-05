@@ -13,7 +13,7 @@ const Home = () => {
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const phrases = ['Asif Akbar', 'Backend Developer (Node.js)'];
+  const phrases = ['Asif Akbar', 'Backend' , 'Developer' , '(Node.js)'];
 
   useEffect(() => {
     const handleTyping = () => {
@@ -30,16 +30,14 @@ const Home = () => {
         setIndex((prev) => (prev + 1) % (phrases.length * 2)); // Loop through phrases
       }
     };
-
     const typingInterval = setInterval(handleTyping, typingSpeed);
-
     return () => clearInterval(typingInterval);
   }, [text, isDeleting, index]);
 
   return (
     <>
       <div
-        className="flex flex-col md:flex-row items-center justify-between p-8 md:p-16 
+        className="flex flex-col md:flex-row items-center justify-between p-4 md:p-8 
         bg-cover bg-center shadow-2xl"
         style={{
           perspective: '1000px',
@@ -51,10 +49,11 @@ const Home = () => {
         {/* Left Side: Heading with Typing Effect and Buttons */}
         <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0 transform transition-transform duration-700">
           <h1
-            className="text-4xl font-bold sm:text-3xl md:text-5xl lg:text-8xl leading-tight tracking-wider"
+            className="text-4xl font-bold sm:text-3xl md:text-5xl lg:text-8xl
+             leading-tight tracking-wider"
             style={{
               color: 'white', // Set the color to white
-              textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(255, 255, 255, 0.6)', // Adjust shadow for better visibility
+              textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8), 4px 4px 6px rgba(255, 255, 255, 0.6)', // Adjust shadow for better visibility
             }}
           >
             I am <br />
@@ -68,7 +67,7 @@ const Home = () => {
               {text}
             </span>
           </h1>
-          <p className="text-xl md:text-2xl mt-5 mb-6 text-gray-300 leading-relaxed shadow-md">
+          <p className="text-xl md:text-2xl mt-5 mb-6 text-gray-300 leading-relaxed">
             Master the most in-demand technologies and <br /> become a MERN-Stack developer.
           </p>
           <div className="flex justify-center md:justify-start mt-5 space-x-6">
