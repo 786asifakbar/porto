@@ -14,7 +14,7 @@ const Navbar = () => {
         <NavLink to="/" aria-label="Home">
           <img src="/blue.png" alt="Logo"
             className="h-16 w-16 rounded-full shadow-lg transition-transform duration-500 
-          hover:scale-105" />
+          hover:scale-105"/>
         </NavLink>
 
         {/* Hamburger Menu Button for Mobile */}
@@ -26,7 +26,10 @@ const Navbar = () => {
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+            <path strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth="2" 
+            d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
         </button>
 
@@ -49,7 +52,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-4">
           {[
             { href: 'https://github.com/786asifakbar', icon: 'fab fa-github' },
-            { href: 'https://twitter.com', icon: 'fab fa-twitter' },
+            { href: 'https://tiktok.com', icon: 'fab fa-tiktok' },
             { href: 'https://www.linkedin.com', icon: 'fab fa-linkedin' },
             { href: 'https://www.instagram.com', icon: 'fab fa-instagram' },
           ].map(({ href, icon }, idx) => (
@@ -99,7 +102,7 @@ const Navbar = () => {
           <div className="flex space-x-6 mt-6">
             {[
               { href: 'https://github.com/786asifakbar', icon: 'fab fa-github' },
-              { href: 'https://twitter.com', icon: 'fab fa-twitter' },
+              { href: 'https://tiktok.com', icon: 'fab fa-tiktok' },
               { href: 'https://www.linkedin.com', icon: 'fab fa-linkedin' },
               { href: 'https://www.instagram.com', icon: 'fab fa-instagram' },
             ].map(({ href, icon }, idx) => (
