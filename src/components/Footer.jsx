@@ -4,19 +4,19 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col items-center px-4 sm:px-6 lg:px-8">
         {/* Centered Text */}
         <p className="text-center mb-4">
-          &copy; 2024 My Portfolio. All rights reserved.
+          &copy; 2026 My Portfolio. All rights reserved.
         </p>
 
         {/* Centered Social Media Icons */}
         <div className="flex space-x-4 justify-center">
           <a
-            href="https://twitter.com"
+            href="https://pk.indeed.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition duration-200"
-            aria-label="Twitter"
+            aria-label="indeed"
           >
-            <i className="fab fa-twitter fa-lg"></i>
+            <i className="fab fa-indeed fa-lg"></i>
           </a>
           <a
             href="https://linkedin.com"

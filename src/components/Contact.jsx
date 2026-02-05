@@ -55,15 +55,17 @@ const Contact = () => {
           <div className="text-center lg:text-left space-y-2 p-4 bg-gray-800 bg-opacity-50 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
             <h3 className="text-3xl md:text-5xl font-semibold mb-4">Get in Touch</h3>
             <p className="mb-2 text-sm md:text-base"><strong>Phone:</strong> (+92) 315-393-3660</p>
-            <p className="mb-2 text-sm md:text-base"><strong>Email:</strong> asifakbar@meacademy.pk</p>
+            <p className="mb-2 text-sm md:text-base"><strong>Email:</strong> 786asifakbar53@gmail.com</p>
             <p className="mb-2 text-sm md:text-base"><strong>Address:</strong> Gorakh Line Near PNS Shifa Hospital Karachi.</p>
           </div>
         </div>
 
         <div className="w-full lg:w-1/2 animate-on-scroll">
-          <h2 className="text-5xl md:text-5xl text-center mb-10 shadow-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg
+          <h2 className="text-5xl md:text-5xl text-center mb-10 shadow-lg 
+          font-extrabold text-transparent bg-clip-text 
+          bg-gradient-to-r from-violet-600 to-violet-600 tracking-wide text-shadow-lg" 
+          style={{ textShadow: '1px 1px 2px rgba(251, 246, 251, 0.8)' }}>
           
-          " style={{ textShadow: '2px 2px 12px rgba(251, 246, 251, 0.8)' }}>
             Contact Me
           </h2>
           <form className="w-full max-w-lg mx-auto space-y-6 bg-gray-800 bg-opacity-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105">
