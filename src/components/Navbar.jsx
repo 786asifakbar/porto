@@ -13,8 +13,8 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center p-5">
         {/* Logo with Link to Home */}
         <NavLink to="/" aria-label="Home">
-          <img src="/blue.png" alt="Logo" 
-          className="h-16 w-16 rounded-full shadow-lg transition-transform duration-500 
+          <img src="/blue.png" alt="Logo"
+            className="h-16 w-16 rounded-full shadow-lg transition-transform duration-500 
           hover:scale-105" />
         </NavLink>
 
