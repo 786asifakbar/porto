@@ -7,7 +7,6 @@ const Navbar = () => {
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
   };
-
   return (
     <nav className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl">
       <div className="container mx-auto flex justify-between items-center p-5">
