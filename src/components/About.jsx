@@ -44,7 +44,7 @@ const About = () => {
             { label: "Skills", value: "React.js, JavaScript, HTML, CSS, Tailwind CSS, MongoDB, Express.js, Node.js" },
             { label: "Experience", value: "1 year in Frontend Development" },
             { label: "Hobbies", value: "Coding, Traveling, Art" },
-            { label: "Email", value: "786asifakbar53@gmail.com" },
+            { label: "Email", value: "asif.ali.deve@gmail.com" },
           ].map((item, index) => (
             <div key={index} className="transition-transform duration-500 transform hover:translate-x-2 hover:-translate-y-2 shadow-lg bg-gradient-to-b from-gray-700 to-purple-800 p-4 rounded-md">
               <p>
