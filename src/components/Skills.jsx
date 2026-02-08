@@ -3,83 +3,91 @@ import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs } from "react-icons/f
 import { SiExpress, SiMongodb, SiTailwindcss } from "react-icons/si";
 
 const skills = [
-  { name: "HTML", icon: <FaHtml5 />, color: "#A83232" },
-  { name: "CSS", icon: <FaCss3Alt />, color: "#3B82F6" },
-  { name: "JavaScript", icon: <FaJsSquare />, color: "#FACC15" },
-  { name: "React", icon: <FaReact />, color: "#60A5FA" },
-  { name: "Node.js", icon: <FaNodeJs />, color: "#4ADE80" },
-  { name: "Express", icon: <SiExpress />, color: "#94A3B8" },
-  { name: "MongoDB", icon: <SiMongodb />, color: "#10B981" },
+  { name: "HTML", icon: <FaHtml5 />, color: "#E34F26" },
+  { name: "CSS", icon: <FaCss3Alt />, color: "#1572B6" },
+  { name: "JavaScript", icon: <FaJsSquare />, color: "#F7DF1E" },
+  { name: "React", icon: <FaReact />, color: "#61DAFB" },
+  { name: "Node.js", icon: <FaNodeJs />, color: "#339933" },
+  { name: "Express.js", icon: <SiExpress />, color: "#888888" },
+  { name: "MongoDB", icon: <SiMongodb />, color: "#4DB33D" },
   { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#38BDF8" },
+  // Additional backend / soft skills
+  { name: "RESTful APIs", icon: null, color: "#A78BFA" },
+  { name: "JWT Authentication", icon: null, color: "#F472B6" },
+  { name: "Password Security", icon: null, color: "#FBBF24" },
+  { name: "MVC Architecture", icon: null, color: "#34D399" },
+  { name: "Postman / API Testing", icon: null, color: "#60A5FA" },
+  { name: "Git & GitHub", icon: null, color: "#F87171" },
+  { name: "Problem Solving", icon: null, color: "#C084FC" },
+  { name: "Prompt Engineering", icon: null, color: "#F472B6" },
 ];
 
 const Skills = () => {
   useEffect(() => {
-    const elements = document.querySelectorAll('.fade-up');
+    const elements = document.querySelectorAll(".fade-up");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fadeInUp');
+            entry.target.classList.add("animate-fadeInUp");
           } else {
-            entry.target.classList.remove('animate-fadeInUp');
+            entry.target.classList.remove("animate-fadeInUp");
           }
         });
       },
       { threshold: 0.1 }
     );
 
-    elements.forEach((element) => {
-      observer.observe(element);
-    });
-
+    elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
   return (
     <section
       id="skills"
-      className="skills-section py-10 text-white shadow-2xl rounded-lg transform transition-transform 
-      hover:scale-105 relative overflow-hidden"
-      style={{
-        backgroundImage: 'url(other.png)', // Replace with the path to your image
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundBlendMode: 'overlay', // Blend the image with the gradient
-      }}
+      className="relative py-16 bg-gray-50 dark:bg-gray-900 transition-colors"
     >
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 opacity-90"></div>
-      <div className="container mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         <h2
-           className="services-title fade-up text-center mb-10 text-5xl font-extrabold
-           text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-violet-600 
-           tracking-wide text-shadow-lg" 
-          style={{ textShadow: '1px 1px 2px rgba(246, 241, 246, 0.6)' }} // Purple shadow
+          className="fade-up text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text
+            bg-gradient-to-r from-purple-600 to-indigo-600 text-center mb-12"
         >
-          Skills
+          My Skills
         </h2>
 
-        <div className="skills-grid grid grid-cols-2 md:grid-cols-4 gap-8">
-          {skills.map((skill, index) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          {skills.map((skill, idx) => (
             <div
-              key={index}
-              className="skill-card fade-up p-5 border border-transparent rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:translate-y-2 hover:-rotate-2 flex flex-col items-center"
+              key={idx}
+              className={`fade-up flex flex-col items-center justify-center p-5 rounded-xl
+                shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl`}
               style={{
-                animationDelay: `${index * 0.2}s`,
-                color: skill.color,
                 background: `linear-gradient(145deg, ${skill.color}20, #1a202c 80%)`,
-                boxShadow: '0 4px 30px rgba(190, 9, 190, 0.5)', // Purple shadow effect
+                color: skill.color,
+                animationDelay: `${idx * 0.1}s`,
               }}
             >
-              <div className="skill-icon text-5xl mb-3 transition-transform transform hover:scale-110">
-                {skill.icon}
-              </div>
-              <span className="skill-name text-lg font-semibold">{skill.name}</span>
+              {skill.icon && (
+                <div className="text-5xl mb-3 transition-transform transform hover:scale-110">
+                  {skill.icon}
+                </div>
+              )}
+              <span className="text-center font-semibold text-sm sm:text-base">
+                {skill.name}
+              </span>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Subtle animation keyframes */}
+      <style>{`
+        @keyframes fadeInUp {
+          0% { opacity: 0; transform: translateY(10px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp { animation: fadeInUp 0.8s forwards; }
+      `}</style>
     </section>
   );
 };

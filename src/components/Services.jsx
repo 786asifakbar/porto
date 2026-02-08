@@ -1,87 +1,73 @@
-import { useEffect } from 'react'; 
+import { useEffect } from 'react';
 
 const services = [
-  { title: 'Web Design', description: 'Professional and modern web design services.', icon: '🌐' },
-  { title: 'Full Stack Development', description: 'Developing robust full-stack applications using the MERN stack.', icon: '💻' },
-  { title: 'MongoDB Development', description: 'Creating efficient databases with MongoDB for scalable applications.', icon: '🗄️' },
-  { title: 'Express.js API Development', description: 'Building powerful and flexible APIs using Express.js.', icon: '⚙️' },
-  { title: 'React.js Frontend', description: 'Building dynamic, fast, and responsive frontends using React.js.', icon: '🔄' },
-  { title: 'Node.js Backend', description: 'High-performance server-side development with Node.js.', icon: '🔧' },
-  { title: 'Secure Authentication', description: 'Implementing secure authentication with JWT and OAuth.', icon: '🔒' },
-  { title: 'Clean Code', description: 'Delivering clean, maintainable, and scalable code.', icon: '📝' },
-  { title: 'Tailwind CSS & Material UI', description: 'Using Tailwind CSS and Material UI for stylish, responsive designs.', icon: '🎨' },
+  { title: 'Web Design', description: 'Professional and modern web design services.', color: 'from-purple-400 to-indigo-500', icon: '🌐' },
+  { title: 'Full Stack Development', description: 'Robust full-stack applications using MERN.', color: 'from-green-400 to-teal-500', icon: '💻' },
+  { title: 'MongoDB Development', description: 'Efficient databases for scalable apps.', color: 'from-yellow-400 to-orange-500', icon: '🗄️' },
+  { title: 'Express.js API Development', description: 'Flexible APIs built with Express.js.', color: 'from-pink-400 to-red-500', icon: '⚙️' },
+  { title: 'React.js Frontend', description: 'Dynamic, fast, responsive frontends.', color: 'from-blue-400 to-cyan-500', icon: '🔄' },
+  { title: 'Node.js Backend', description: 'High-performance server-side development.', color: 'from-lime-400 to-green-500', icon: '🔧' },
+  { title: 'Secure Authentication', description: 'JWT & OAuth based secure auth.', color: 'from-purple-400 to-pink-500', icon: '🔒' },
+  { title: 'Clean Code', description: 'Delivering maintainable, scalable code.', color: 'from-indigo-400 to-purple-500', icon: '📝' },
+  { title: 'Tailwind CSS & Material UI', description: 'Stylish responsive designs with modern frameworks.', color: 'from-pink-400 to-red-500', icon: '🎨' },
 ];
 
 const Services = () => {
   useEffect(() => {
-    const elements = document.querySelectorAll('.fade-up, .zoom-in');
+    const elements = document.querySelectorAll('.fade-up');
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-          } else {
-            entry.target.classList.remove('animate');
-          }
+        entries.forEach(entry => {
+          if(entry.isIntersecting) entry.target.classList.add('animate-fadeInUp');
+          else entry.target.classList.remove('animate-fadeInUp');
         });
-      },
-      { threshold: 0.1 }
+      }, { threshold: 0.1 }
     );
-
-    elements.forEach((element) => {
-      observer.observe(element);
-    });
-
+    elements.forEach(el => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section 
-      id="services" 
-      className="services-section py-10 text-white relative overflow-hidden"
-      style={{
-        backgroundImage: 'url(other.png)', // Replace with your image path
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundBlendMode: 'overlay', // Blends with gradient
-      }}
-    >
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 opacity-80"></div>
-      
-      {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <h2 
-          className="services-title fade-up text-center mb-10 text-5xl font-extrabold
-           text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-violet-600 
-           tracking-wide text-shadow-lg" 
-          style={{ textShadow: '1px 1px 2px rgba(246, 241, 246, 0.6)' }} // Purple shadow
-        >
+    <section id="services" className="relative py-20 bg-gray-50 dark:bg-gray-900 transition-colors">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <h2 className="fade-up text-4xl md:text-5xl font-extrabold text-center
+          text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 mb-12">
           My Services
         </h2>
-        <div className="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, idx) => (
             <div
-              key={index}
-              className="service-card zoom-in p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 hover:scale-105"
+              key={idx}
+              className={`fade-up p-6 rounded-2xl shadow-xl
+                transform transition duration-300 hover:-translate-y-3 hover:scale-105
+                relative overflow-hidden`}
               style={{
-                background: 'rgba(255, 255, 255, 0.1)', // Semi-transparent white overlay
-                backdropFilter: 'blur(10px)', // Frosted glass effect
-                border: '1px solid rgba(255, 255, 255, 0.2)', // Light border
-                animationDelay: `${index * 0.2}s`,
-                boxShadow: '0 4px 30px rgba(128, 0, 128, 0.5)', // Purple shadow for the card
+                background: `linear-gradient(135deg, ${service.color})`,
+                animationDelay: `${idx * 0.15}s`,
               }}
-              aria-label={`Service: ${service.title}`}
             >
-              <div className="service-icon text-5xl mb-4 text-indigo-200 transition-transform transform hover:scale-110">
-                {service.icon}
+              {/* Dark overlay for text readability */}
+              <div className="absolute inset-0 bg-black/25 rounded-2xl pointer-events-none"></div>
+
+              <div className="relative text-white">
+                <div className="text-6xl mb-4">{service.icon}</div>
+                <h3 className="text-2xl font-bold mb-2 drop-shadow-lg">{service.title}</h3>
+                <p className="text-base leading-relaxed drop-shadow-md">{service.description}</p>
               </div>
-              <h3 className="service-title text-2xl font-semibold mb-2 text-white">{service.title}</h3>
-              <p className="service-description text-base text-gray-300">{service.description}</p>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Fade-in animation */}
+      <style>{`
+        @keyframes fadeInUp {
+          0% { opacity: 0; transform: translateY(20px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp { animation: fadeInUp 0.8s forwards; }
+      `}</style>
     </section>
   );
 };
