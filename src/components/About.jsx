@@ -24,18 +24,22 @@ const About = () => {
 
         {/* Paragraph with subtle color gradients */}
         <p className="text-sm md:text-md mt-4 md:mt-5 leading-relaxed text-gray-300">
-          I am a passionate Frontend Developer specializing in React.js. With several years of experience,
-          I have honed my skills in building responsive, user-friendly web applications. My expertise lies
-          in creating interactive interfaces, optimizing performance, and ensuring a seamless user experience.
+          Hi, I’m Asif Ali — a dedicated MERN Stack Developer who loves turning ideas into clean, 
+          modern, and high-performing web applications. I specialize in building responsive, 
+          user-friendly, and visually appealing websites using React, Node.js, Express, MongoDB, 
+          HTML, CSS, and JavaScript.
+          I’ve worked on NGO platforms, portfolio websites, and full-stack projects, 
+          where I focused on smooth user experiences, 
+          clean architecture, and scalable solutions. 
+          I believe good design and strong functionality should always go hand in hand.
         </p>
         <p className="text-sm md:text-md mt-4 md:mt-5 leading-relaxed text-gray-300">
-          In addition to my frontend skills, I have extensive experience with the MERN stack. I excel in 
-          developing full-stack applications using MongoDB, Express.js, React.js, and Node.js. My MERN stack 
-          development involves designing robust backend services with Node.js and Express.js, and creating 
-          dynamic, data-driven frontends with React.js. I am adept at managing databases with MongoDB and 
-          integrating complex functionalities to build scalable and efficient applications.
+          I’m a continuous learner, always exploring new tools and techniques to improve
+           performance, UI/UX, and overall product quality. Currently, 
+           I’m open to job opportunities, freelance projects, 
+           and collaborations where I can add real value and grow as a developer.
+           Let’s build something impactful together 🚀
         </p>
-
         {/* Information Grid with 3D shadow effect */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm mt-5">
           {[
