@@ -1,43 +1,46 @@
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl py-6">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-12">
-        {/* Footer Text */}
-        <p className="text-sm md:text-base text-center md:text-left mb-3 md:mb-0">
-          &copy; 2026 <span className="font-semibold">Asif Ali</span>. All rights reserved.
+    <footer className="relative py-12 bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-2xl">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+        {/* Text */}
+        <p className="text-center md:text-left text-sm md:text-base">
+          &copy; 2026 My Portfolio. All rights reserved.
         </p>
 
-        {/* Social Icons */}
-        <div className="flex space-x-6">
-          {[
-            { href: "https://pk.indeed.com", label: "Indeed", icon: "fab fa-indeed" },
-            { href: "https://linkedin.com", label: "LinkedIn", icon: "fab fa-linkedin" },
-            { href: "https://github.com", label: "GitHub", icon: "fab fa-github" },
-          ].map(({ href, label, icon }, idx) => (
-            <a
-              key={idx}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="text-white text-2xl hover:text-yellow-300 transition-all duration-300 transform hover:scale-125"
-            >
-              <i className={icon}></i>
-            </a>
-          ))}
+        {/* Social Links */}
+        <div className="flex space-x-6 text-2xl">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-300 transition-colors duration-300"
+            aria-label="LinkedIn"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-300 transition-colors duration-300"
+            aria-label="GitHub"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gray-300 transition-colors duration-300"
+            aria-label="Twitter"
+          >
+            <i className="fab fa-twitter"></i>
+          </a>
         </div>
       </div>
 
-      {/* Optional subtle animated background circle */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-purple-700 rounded-full opacity-20 blur-3xl pointer-events-none animate-pulse-slow"></div>
-
-      <style>{`
-        @keyframes pulse-slow {
-          0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.2; }
-          50% { transform: translateX(-50%) scale(1.1); opacity: 0.3; }
-        }
-        .animate-pulse-slow { animation: pulse-slow 6s infinite ease-in-out; }
-      `}</style>
+      {/* Decorative glow */}
+      <div className="absolute inset-0 pointer-events-none rounded-t-3xl bg-gradient-to-r from-white/10 via-white/5 to-white/10"></div>
     </footer>
   );
 };
