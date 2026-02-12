@@ -1,20 +1,70 @@
-import { useEffect } from 'react';
-import WhatsAppButton from './WhatsAppButton';
+import { useEffect, useState } from "react";
+import axios from "axios";
+import WhatsAppButton from "./WhatsAppButton";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [responseMsg, setResponseMsg] = useState("");
+
+  // Scroll Animation
   useEffect(() => {
     const handleScrollAnimation = () => {
-      const elements = document.querySelectorAll('.animate-on-scroll');
+      const elements = document.querySelectorAll(".animate-on-scroll");
       elements.forEach((el) => {
         const position = el.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        if (position < windowHeight - 50) el.classList.add('animate-fadeInUp');
+        if (position < windowHeight - 50)
+          el.classList.add("animate-fadeInUp");
       });
     };
-    window.addEventListener('scroll', handleScrollAnimation);
+
+    window.addEventListener("scroll", handleScrollAnimation);
     handleScrollAnimation();
-    return () => window.removeEventListener('scroll', handleScrollAnimation);
+
+    return () =>
+      window.removeEventListener("scroll", handleScrollAnimation);
   }, []);
+
+  // Input Change
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Submit Form
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setResponseMsg("");
+
+    try {
+      const res = await axios.post(
+  `${import.meta.env.VITE_API_URL}/api/users`,
+  formData
+);
+
+      
+
+
+
+      setResponseMsg(res.data.message);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      setResponseMsg(
+        error.response?.data?.message || "Something went wrong"
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -22,84 +72,89 @@ const Contact = () => {
         id="contact"
         className="py-16 relative overflow-hidden bg-gray-900 text-white"
         style={{
-          backgroundImage: 'url(other.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundImage: "url(other.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-indigo-900 to-gray-900 opacity-80"></div>
 
         <div className="container mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center min-h-screen gap-12 relative z-10">
-          {/* Contact Info + Map */}
+          
+          {/* LEFT SIDE */}
           <div className="w-full lg:w-1/2 flex flex-col space-y-10 animate-on-scroll">
-            <div className="bg-gray-800 bg-opacity-60 p-6 rounded-xl shadow-2xl hover:shadow-purple-700 transition-shadow duration-300 transform hover:scale-105">
-              <h3 className="text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400 drop-shadow-lg">
+            <div className="bg-gray-800 bg-opacity-60 p-6 rounded-xl shadow-2xl hover:shadow-purple-700 transition duration-300 transform hover:scale-105">
+              <h3 className="text-4xl md:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
                 Get in Touch
               </h3>
-              <p className="mb-3 text-base md:text-lg">
-                <strong>Phone:</strong> (+92) 315-393-3660
-              </p>
-              <p className="mb-3 text-base md:text-lg">
-                <strong>Email:</strong> asif.ali.deve@gmail.com
-              </p>
-              <p className="mb-3 text-base md:text-lg">
-                <strong>Address:</strong> Gorakh Line Near PNS Shifa Hospital, Karachi
-              </p>
-            </div>
-
-            <div className="rounded-xl overflow-hidden shadow-2xl hover:shadow-purple-700 transform transition hover:scale-105">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.0567626221214!2d67.06078377460341!3d24.896045377906063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f74156c5323%3A0x257f1b15998551b7!2sHelp%20Human%20Rights%20Organization%20Of%20Pakistan!5e0!3m2!1sen!2s!4v1730112820062!5m2!1sen!2s"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Google Map Location"
-              ></iframe>
+              <p><strong>Phone:</strong> (+92) 315-393-3660</p>
+              <p><strong>Email:</strong> asif.ali.deve@gmail.com</p>
+              <p><strong>Address:</strong> Gorakh Line Near PNS Shifa Hospital, Karachi</p>
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* RIGHT SIDE FORM */}
           <div className="w-full lg:w-1/2 animate-on-scroll">
-            <h2 className="text-5xl md:text-5xl text-center mb-10 font-extrabold
-              text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400 drop-shadow-lg">
+            <h2 className="text-5xl text-center mb-10 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
               Contact Me
             </h2>
 
-            <form className="w-full max-w-lg mx-auto space-y-6 bg-gray-800 bg-opacity-60 p-8 rounded-2xl shadow-2xl hover:shadow-purple-700 transition-shadow duration-300 transform hover:scale-105">
+            <form
+              onSubmit={handleSubmit}
+              className="w-full max-w-lg mx-auto space-y-6 bg-gray-800 bg-opacity-60 p-8 rounded-2xl shadow-2xl"
+            >
               <div>
-                <label className="block mb-2 text-sm md:text-base font-medium">Name</label>
+                <label className="block mb-2">Name</label>
                 <input
                   type="text"
-                  className="w-full p-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-sm hover:shadow-lg transition-shadow duration-200"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full p-3 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-purple-500"
                   placeholder="Your Name"
                 />
               </div>
+
               <div>
-                <label className="block mb-2 text-sm md:text-base font-medium">Email</label>
+                <label className="block mb-2">Email</label>
                 <input
                   type="email"
-                  className="w-full p-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-sm hover:shadow-lg transition-shadow duration-200"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full p-3 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-purple-500"
                   placeholder="Your Email"
                 />
               </div>
+
               <div>
-                <label className="block mb-2 text-sm md:text-base font-medium">Message</label>
+                <label className="block mb-2">Message</label>
                 <textarea
-                  className="w-full p-3 bg-gray-700 text-white border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-sm hover:shadow-lg transition-shadow duration-200"
+                  name="message"
                   rows="5"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="w-full p-3 bg-gray-700 text-white rounded-lg focus:ring-2 focus:ring-purple-500"
                   placeholder="Your Message"
                 />
               </div>
+
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold py-3 px-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-105"
+                disabled={loading}
+                className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 py-3 rounded-xl font-semibold hover:scale-105 transition"
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
+
+              {responseMsg && (
+                <p className="text-center mt-4 text-green-400">
+                  {responseMsg}
+                </p>
+              )}
             </form>
           </div>
         </div>
