@@ -40,9 +40,9 @@ const Navbar = () => {
             alt="Asif Akbar"
             className="h-10 w-10 rounded-full"
           />
-          <span className="font-bold text-lg text-gray-800 dark:text-white">
+          {/* <span className="font-bold text-lg text-gray-800 dark:text-white">
             Asif Akbar
-          </span>
+          </span> */}
         </NavLink>
 
         {/* Desktop Menu */}
@@ -136,5 +136,4 @@ const Navbar = () => {
     </header>
   );
 };
-
 export default Navbar;
