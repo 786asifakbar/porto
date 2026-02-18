@@ -112,6 +112,7 @@ const Home = () => {
               className="w-64 sm:w-72 md:w-96 rounded-2xl
               shadow-2xl border border-white/10"
             />
+            <WhatsAppButton />
           </div>
         </div>
       </section>
@@ -122,7 +123,7 @@ const Home = () => {
       <Services />
       <Projects />
       <Contact />
-      <WhatsAppButton />
+      
     </>
   );
 };
