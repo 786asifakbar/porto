@@ -8,7 +8,6 @@ const sections = [
   { name: "Projects", path: "/projects" },
   { name: "Contact", path: "/contact" },
 ];
-
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(false);
